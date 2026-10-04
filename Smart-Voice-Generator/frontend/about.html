@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><title>About – Smart Voice Generator</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"></head><body>
+<div id="app-header"></div>
+<main class="wrap page">
+  <h1>About</h1>
+  <p style="color:var(--mute);max-width:60ch">Smart Voice Generator is a Text and Speech Analysis project. It reads text aloud with the browser's built-in speech engine and reports basic statistics about the text.</p>
+  <div class="about-grid">
+    <div class="card"><h2>Frontend</h2>HTML5, CSS3, vanilla JavaScript and the Web Speech API.</div>
+    <div class="card"><h2>Backend</h2>Python Flask REST API for text analysis and history.</div>
+    <div class="card"><h2>Database</h2>SQLite stores each speech request with its voice, speed and pitch.</div>
+    <div class="card"><h2>Limits</h2>Voices depend on your browser and device. Audio download works only where the browser allows tab-audio capture.</div>
+  </div>
+</main>
+<div id="app-footer"></div><div id="toast" role="status"></div>
+<script src="js/main.js"></script>
+</body></html>

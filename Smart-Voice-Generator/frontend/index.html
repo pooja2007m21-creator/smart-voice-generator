@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><title>Smart Voice Generator</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"></head><body>
+<div id="app-header"></div>
+<main class="wrap">
+<section class="hero">
+  <div>
+    <h1>Turn Your Text Into Natural Speech</h1>
+    <p>Type, analyze, customize, and listen to your text with our smart text-to-speech system.</p>
+    <a class="btn primary" href="#studio"><i class="fa-solid fa-microphone-lines"></i> Generate Voice</a>
+  </div>
+  <div class="wave" id="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</section>
+
+<section id="studio" class="grid">
+  <div class="card">
+    <h2>Your text</h2>
+    <textarea id="text" maxlength="5000" placeholder="Type or paste text here..."></textarea>
+    <div class="row">
+      <button class="btn" id="paste"><i class="fa-solid fa-paste"></i> Paste</button>
+      <button class="btn" id="sample"><i class="fa-solid fa-file-lines"></i> Sample text</button>
+      <button class="btn danger" id="clear"><i class="fa-solid fa-trash"></i> Clear</button>
+      <span class="sp"><span id="count">0</span> / 5000</span>
+    </div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="row">
+      <button class="btn primary" id="play"><i class="fa-solid fa-play"></i> Speak</button>
+      <button class="btn" id="pause"><i class="fa-solid fa-pause"></i> Pause</button>
+      <button class="btn" id="resume"><i class="fa-solid fa-forward-step"></i> Resume</button>
+      <button class="btn" id="stop"><i class="fa-solid fa-stop"></i> Stop</button>
+      <button class="btn" id="download"><i class="fa-solid fa-download"></i> Download audio</button>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Text analysis</h2>
+    <div class="stats">
+      <div><b id="s-words">0</b><small>Words</small></div>
+      <div><b id="s-chars">0</b><small>Characters</small></div>
+      <div><b id="s-sent">0</b><small>Sentences</small></div>
+      <div><b id="s-time">0 min</b><small>Speaking time</small></div>
+    </div>
+    <div class="top" id="top">Frequent words appear here.</div>
+  </div>
+</section>
+
+<section id="settings" class="card" style="margin-bottom:20px">
+  <h2>Voice settings</h2>
+  <label for="voice">Voice</label><select id="voice"></select>
+  <label for="rate">Speed: <span id="rate-v">1.0</span>x</label><input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+  <label for="pitch">Pitch: <span id="pitch-v">1.0</span></label><input type="range" id="pitch" min="0.5" max="2" step="0.1" value="1">
+  <label for="volume">Volume: <span id="volume-v">100</span>%</label><input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+  <div class="row"><button class="btn" id="reset"><i class="fa-solid fa-rotate-left"></i> Reset settings</button></div>
+</section>
+</main>
+<div id="app-footer"></div><div id="toast" role="status"></div>
+<script src="js/main.js"></script><script src="js/analysis.js"></script><script src="js/speech.js"></script>
+</body></html>
